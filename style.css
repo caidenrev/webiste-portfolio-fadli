@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #ededed;
+  background: linear-gradient(to right, black 50%, transparent 50%);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header a {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.header a span {
+  color: #00abf0;
+}
+
+.logo {
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+  text-shadow: 0 4px 20px rgb(0, 183, 255); /* Efek box-shadow saat hover */
+}
+
+.home {
+  height: 100vh;
+  background: url('home2.jpg') no-repeat;
+  background: linear-gradient(to right, rgba(3, 0, 12, 0.884) 10%, transparent 50%), url('home2.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #00abf0;
+}
+
+.home-content h3 span {
+  color: #ededed;
+}
+
+.home-content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.home-content .btn box {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  height: 60px;
+  font-size: 22px;
+}
+
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk transform dan box-shadow */
+  margin: 1rem 1rem;
+}
+
+.btn-box a:hover {
+  color: #00abf0;
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 171, 240, 0.7); /* Efek box-shadow saat hover */
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+  color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+  background: #00abf0;
+}
+
+.btn-box a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 171, 240, 0.7); /* Efek box-shadow saat hover */
+  box-shadow: #00abf0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home-content {
+  max-width: 600px;
+  animation: fadeIn 1s ease-in-out; /* Menambahkan animasi fade in */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.home-content {
+  max-width: 600px;
+  animation: slideIn 1s ease-in-out; /* Menambahkan animasi slide in */
+}
+
+.btn-box a {
+  /* existing styles */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Tambahkan transisi untuk background */
+}
+
+.btn-box a:hover {
+  color: #00abf0;
+  transform: scale(1.1) rotate(5deg); /* Tambahkan rotasi saat hover */
+  box-shadow: 0 4px 20px rgba(0, 171, 240, 0.7);
+}
+
+.home-sci a {
+  /* existing styles */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Pastikan transisi sudah ada */
+}
+
+.home-sci a:hover {
+  transform: scale(1.2); /* Membesarkan ikon saat hover */
+  box-shadow: 0 4px 20px rgba(0, 171, 240, 0.7);
+}
+
+.header {
+  /* existing styles */
+  transition: background 0.3s ease; /* Menambahkan transisi pada background */
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* Ubah warna background saat digulir */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Menambahkan pergeseran vertikal */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-content {
+  max-width: 600px;
+  opacity: 0; /* Mulai dengan opacity 0 */
+  animation: fadeIn 1s ease-in-out forwards; /* Menambahkan animasi fade in */
+}
+
+.fade-in {
+  opacity: 1; /* Pastikan elemen terlihat */
+  animation: fadeIn 1s ease-in-out forwards; /* Memicu animasi */
+}
